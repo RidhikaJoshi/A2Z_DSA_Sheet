@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void bubbleSort(int arr[], int n)
+void bubbleSort(vector<int>&arr, int n)
 {
     while(1)
     {
@@ -19,4 +19,28 @@ void bubbleSort(int arr[], int n)
         if(c==-1)
             break;
     }
+}
+int main()
+{
+    int n,x;
+    cin >> n;
+    vector<int>arr;
+    for(int i=0;i<n;i++)
+    {
+        cin >> x;
+        arr.push_back(x);
+    }
+     for(int i=0;i<n;i++)
+    {
+        cout << arr[i] << " " ;
+    }
+    int low=0,high=n-1;
+    bubbleSort(arr,n);
+    cout << endl;
+    cout << "After sorting" << endl;
+    for(int i=0;i<n;i++)
+    {
+        cout << arr[i] << " " ;
+    }
+    return 0;
 }

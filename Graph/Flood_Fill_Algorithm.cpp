@@ -5,6 +5,9 @@ Given a coordinate (sr, sc) representing the starting pixel (row and column) of 
 
 To perform a "flood fill", consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on. Replace the color of all of the aforementioned pixels with the newColor.
 */
+
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     void dfs(int r,int c,vector<vector<int>>& image, int sr, int sc, int newColor, vector<vector<int>>&vis)
@@ -36,3 +39,28 @@ public:
         return image;
     }
 };
+int main()
+{
+    Solution s;
+    int r,c,sr,sc,newColor;
+    cin >> r >> c;
+    vector<vector<int>>image(r,vector<int>(c));
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            cin >> image[i][j];
+        }
+    }
+    cin >> sr >> sc >> newColor;
+    vector<vector<int>>ans(r,vector<int>(c));
+    ans=s.floodFill(image,sr,sc,newColor);
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+           cout << ans[i][j] << " ";
+        }
+        cout << endl;
+    }
+}

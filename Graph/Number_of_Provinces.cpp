@@ -3,6 +3,9 @@ Given an undirected graph with V vertices. We say two vertices u and v belong to
 
 Note: A province is a group of directly or indirectly connected cities and no other cities outside of the group.
 */
+
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
   public:
     void dfs(int src,vector<vector<int>>&adj,vector<int>&vis)
@@ -30,3 +33,21 @@ class Solution {
        return count;
     }
 };
+int main()
+{
+    Solution s;
+    int V,u,v;
+    cin >> V ;
+    vector<vector<int>> adj(V,vector<int>(V));
+    for(int i=0;i<V;i++)
+    {
+        for(int j=0;j<V;j++)
+        {
+            cin >> adj[i][j];
+        }
+        
+    }
+    int ans=s. numProvinces(adj,V);
+    cout << ans << endl;
+    return 0;
+}

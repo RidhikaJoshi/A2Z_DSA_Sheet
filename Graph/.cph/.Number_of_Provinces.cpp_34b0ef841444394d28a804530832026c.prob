@@ -1,0 +1,1 @@
+{"name":"Local: Number_of_Provinces","url":"d:\\Git GitHub\\A2Z_DSA_Sheet\\Graph\\Number_of_Provinces.cpp","tests":[{"id":1688108191862,"input":"3\n1 0 1\n0 1 0\n1 0 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Git GitHub\\A2Z_DSA_Sheet\\Graph\\Number_of_Provinces.cpp","group":"local","local":true}

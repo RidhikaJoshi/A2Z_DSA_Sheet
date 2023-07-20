@@ -33,6 +33,8 @@ class Solution
                 }
             }
         }
+
+        
           for(int i=0;i<r;i++)
         {
             for(int j=0;j<c;j++)
@@ -45,12 +47,16 @@ class Solution
                 }
             }
         }
+
+
         vector<vector<int>>vis(r,vector<int>(c,0));
         queue<pair<int,int>>q;
 	   int delr[4]={-1,0,1,0};
 	   int delc[4]={0,1,0,-1};
         q.push({sr,sc});
         vis[sr][sc]=1;
+
+
         while(q.size()!=0)
         {
             int i1=q.front().first;
@@ -74,6 +80,8 @@ class Solution
             }
             
         }
+
+
         if(vis[dr][dc]==0)
             return false;
         return true;

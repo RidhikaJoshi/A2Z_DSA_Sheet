@@ -17,6 +17,8 @@ class Solution {
     {
         vector<int>dist(V,100000000);
         dist[S]=0;
+
+        
         for(int i=0;i<V-1;i++)
         {
             for(int j=0;j<edges.size();j++)
@@ -28,6 +30,8 @@ class Solution {
                     dist[v]=dist[u]+wt;
             }
         }
+
+
         int c=1;
         for(int i=0;i<edges.size();i++)
         {
@@ -52,6 +56,8 @@ int main()
         cin >> x >> y >>z ;
         edges.push_back({x,y,z});
     }
+
+
     cin >> src;
     Solution s;
     vector<int>res=s.bellman_ford(v,edges,src);
@@ -59,5 +65,7 @@ int main()
     {
         cout << res[i] << " ";
     }
+
+
     return 0;
 }

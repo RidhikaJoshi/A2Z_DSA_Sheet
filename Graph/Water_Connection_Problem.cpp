@@ -49,6 +49,7 @@ class Solution
         //     }
         // }
         int count=0;
+        
            queue<int>q;
         for(int i=1;i<=n;i++)
         {
@@ -60,6 +61,8 @@ class Solution
         }
         vector<int>vis(n+1,0);
         vector<vector<int>>result;
+
+
         while(q.size()!=0)
         {
             int it=q.front();
@@ -80,6 +83,8 @@ class Solution
     }
 };
 
+
+
 int main()
 {
     int n,p;
@@ -90,6 +95,8 @@ int main()
         cin >> a[i] >> b[i] >> d[i];
     }
     Solution s;
+
+
     vector<vector<int>>res=s.solve(n,p,a,b,d);
     cout << res.size() << endl;
     for(int i=0;i<res.size();i++)

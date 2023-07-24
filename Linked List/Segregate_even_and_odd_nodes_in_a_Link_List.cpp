@@ -51,6 +51,57 @@ public:
         }
         return head;
     }
+// optimised Solution
+    class Solution{
+public:
+    Node* divideOptimised(int N, Node *head)
+    {
+        Node *evenhead=NULL,*oddhead=NULL,*e=NULL,*o=NULL;
+        Node *temp=head;
+        while(temp!=NULL)
+        {
+            //out << temp->data << " ";
+            if((temp->data)%2==0)
+            {
+                if(evenhead==NULL)
+                {
+                    evenhead=temp;
+                    e=temp;
+                }
+                else
+                {
+                    e->next=temp;
+                    e=e->next;
+                }
+            }
+            if((temp->data)%2!=0)
+            {
+                if(oddhead==NULL)
+                {
+                    oddhead=temp;
+                    o=temp;
+                }
+                else
+                {
+                    o->next=temp;
+                    o=o->next;
+                }
+            }
+            temp=temp->next;
+        }
+        if(evenhead==NULL)
+            return oddhead;
+        if(oddhead==NULL)
+            return evenhead;
+        if(o!=NULL && e!=NULL)
+        {
+            o->next=NULL;
+            e->next=oddhead;
+        }
+        return evenhead;
+       
+    }
+};
 };
 
 int main()

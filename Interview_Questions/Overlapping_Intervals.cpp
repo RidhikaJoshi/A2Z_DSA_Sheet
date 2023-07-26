@@ -51,6 +51,8 @@ public:
     {
         sort(intervals.begin(),intervals.end());
         vector<vector<int>>res;
+
+        
         for(int i=0;i<intervals.size();i++)
         {
             int u=intervals[i][0];
@@ -73,9 +75,13 @@ public:
                 
             }
         }
+
+
         return res;
     }
 };
+
+
 
 int main()
 {
@@ -88,6 +94,8 @@ int main()
         cin >> x >> y;
         intervals.push_back({x,y});
     }
+
+
     Solution s;
 
     vector<vector<int>>res= s.overlappedIntervaloptimised(intervals);

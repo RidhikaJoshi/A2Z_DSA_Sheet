@@ -23,6 +23,8 @@ class Solution{
        return mx;
     }
 };
+
+
 int main()
 {
     int n;
@@ -32,6 +34,8 @@ int main()
     {
         cin >> A[i];
     }
+
+    
     Solution s;
     cout << s.maxLen(A,n) << endl;;
     return 0;

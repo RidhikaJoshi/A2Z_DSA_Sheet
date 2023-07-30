@@ -2,6 +2,8 @@
 using namespace std;
 ///////////////////////////////////////////
 // Brute Force Merge Function
+
+
 void merge(vector<int>&arr,int low,int mid,int high)
 {
     vector<int>a;
@@ -39,6 +41,8 @@ void merge(vector<int>&arr,int low,int mid,int high)
         j++;k++;
     }
 }
+
+
 /////////////////////////////////////////////
 //More Optimised Merge Function
 void merge_new(int arr[], int l, int m, int r)
@@ -77,6 +81,8 @@ void merge_new(int arr[], int l, int m, int r)
         }
     }
 
+
+
 void MergeSort(vector<int>&arr,int low,int high)
 {
     if(low<high)
@@ -87,6 +93,8 @@ void MergeSort(vector<int>&arr,int low,int high)
         merge(arr,low,mid,high);
     }
 }
+
+
 
 int main()
 {

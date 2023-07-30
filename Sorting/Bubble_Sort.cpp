@@ -4,6 +4,8 @@ using namespace std;
 
 ///////////////////////////////////////
 // Iterrative Bubble Sort
+
+
 void bubbleSort(vector<int>&arr, int n)
 {
     while(1)
@@ -21,6 +23,8 @@ void bubbleSort(vector<int>&arr, int n)
             break;
     }
 }
+
+
 //////////////////////////////////////////////
 // Recursive Bubble Sort
 
@@ -40,6 +44,8 @@ void bubbleSort_rec(int arr[], int n)
     else
     bubbleSort( arr,  n);
 }
+
+
 
 
 int main()

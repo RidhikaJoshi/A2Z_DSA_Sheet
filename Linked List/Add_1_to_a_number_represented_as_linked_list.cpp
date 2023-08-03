@@ -17,6 +17,7 @@ struct Node
 
 };
 
+
 class Solution
 {
     public:
@@ -32,6 +33,8 @@ class Solution
         }
         return prev;
     }
+
+    
     Node* addOne(Node *head) 
     {
         Node *newhead=reverse(head);

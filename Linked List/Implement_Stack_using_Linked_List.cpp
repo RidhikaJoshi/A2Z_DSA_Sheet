@@ -14,6 +14,8 @@ struct StackNode
     }
 
 };
+
+
 class MyStack
 {
     StackNode *top;
@@ -26,12 +28,16 @@ class MyStack
         }
     
 };
+
+
 void MyStack :: push(int x) 
 {
     StackNode *curr=new StackNode(x);
     curr->next=top;
     top=curr;
 }
+
+
 
 //Function to remove an item from top of the stack.
 int MyStack ::pop() 

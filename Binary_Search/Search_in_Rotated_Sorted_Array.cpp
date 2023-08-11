@@ -21,6 +21,7 @@ public:
             int mid=low+(high-low)/2;
             if(nums[mid]==target)
                 return mid;
+                /// left half is sorted 
             else if(nums[low]<=nums[mid])
             {
                 if(target>=nums[low] && target<nums[mid])
@@ -28,6 +29,7 @@ public:
                 else
                     low=mid+1;
             }
+            // ot the right half is sorted
             else
             {
                 if(target>nums[mid] && target<=nums[high])

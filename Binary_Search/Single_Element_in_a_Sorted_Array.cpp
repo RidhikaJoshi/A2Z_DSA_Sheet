@@ -6,6 +6,15 @@ Return the single element that appears only once.
 Your solution must run in O(log n) time and O(1) space.
 */
 
+/*
+The index sequence of the duplicate numbers in the left half is always (even, odd). That means one of the following conditions will be satisfied if we are in the left half:
+If the current index is even, the element at the next odd index will be the same as the current element.
+Similarly, If the current index is odd, the element at the preceding even index will be the same as the current element.
+The index sequence of the duplicate numbers in the right half is always (odd, even). That means one of the following conditions will be satisfied if we are in the right half:
+If the current index is even, the element at the preceding odd index will be the same as the current element.
+Similarly, If the current index is odd, the element at the next even index will be the same as the current element.
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 // Intuition: Since all other elements present in the array is twice only one element is single.

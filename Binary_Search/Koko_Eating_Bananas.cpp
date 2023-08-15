@@ -7,6 +7,8 @@ using namespace std;
 
 class Solution {
   public:
+
+
     int Solve(int N, vector<int>& piles, int H)
     {
         int ans=0;
@@ -33,4 +35,6 @@ class Solution {
         }
         return ans;
     }
+
+    
 };

@@ -26,6 +26,8 @@ class Solution{
 			return 0;
 
 	}
+
+
 	int NthRoot(int n, int m)
 	{
 	   int low=1,high=m;
@@ -40,5 +42,7 @@ class Solution{
 	        low=mid+1;
 	   }
 	   return -1;
-	}  
+	} 
+	
+	 
 };

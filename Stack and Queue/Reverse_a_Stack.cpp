@@ -8,6 +8,8 @@ using namespace std;
 class Solution{
 public:
     stack<int>s;
+
+    
     void Reverse(stack<int> &St)
     {
         if(St.size()==0)

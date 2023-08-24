@@ -5,23 +5,25 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target)
+    // Time-O(N)
+    // Space-O(N)
+    vector<int> twoSum(vector<int> &nums, int target)
     {
-        unordered_map<int,int>m;
-        for(int i=0;i<nums.size();i++)
+        unordered_map<int, int> m;
+        for (int i = 0; i < nums.size(); i++)
         {
-            if(m.find((target-nums[i]))!=m.end())
+            if (m.find((target - nums[i])) != m.end())
             {
-                return {m[(target-nums[i])],i};
+                return {m[(target - nums[i])], i};
             }
-            m[nums[i]]=i;
+            m[nums[i]] = i;
         }
-        return {0,0};
-        
+        return {0, 0};
     }
 };

@@ -6,6 +6,7 @@ using namespace std;
 // 1st approach
 class Solution
 {
+
 public:
     vector<int> countBits(int n)
     {

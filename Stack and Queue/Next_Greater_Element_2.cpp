@@ -4,6 +4,34 @@ The next greater element of a number x is the first greater number to its traver
 #include <bits/stdc++.h>
 using namespace std;
 
+// Naive Solution
+// Time=O(N^2) and Space=O(N);
+
+class Solution
+{
+public:
+    vector<int> nextGreaterElement(int N, vector<int> &arr)
+    {
+        vector<int> res;
+        for (int i = 0; i < N; i++)
+        {
+            int c = -1;
+            for (int j = (i + 1) % N; j != i; j = (j + 1) % N)
+            {
+                if (arr[j] > arr[i])
+                {
+                    res.push_back(arr[j]);
+                    c = 1;
+                    break;
+                }
+            }
+            if (c == -1)
+                res.push_back(-1);
+        }
+        return res;
+    }
+};
+
 // Optimised Solution
 // Time=O(2N) and Space=O(3N);
 class Solution

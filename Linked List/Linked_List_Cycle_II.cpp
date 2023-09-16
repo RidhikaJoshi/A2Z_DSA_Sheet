@@ -17,6 +17,28 @@ using namespace std;
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+// Naive Solution
+// Time=o(N) and Space=O(N);
+class Solution
+{
+public:
+    ListNode *detectCycle(ListNode *head)
+    {
+        set<ListNode *> st;
+        ListNode *temp = head;
+        while (temp != NULL)
+        {
+            if (st.find(temp) != st.end())
+                return temp;
+            st.insert(temp);
+            temp = temp->next;
+        }
+        return NULL;
+    }
+};
+// Optimised solution
+// using slow and fast pointer
+// Time=O(N) and Space=O(1)
 class Solution
 {
 public:
